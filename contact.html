@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>فروع النقابة والتواصل | نقابة المهندسين بالبحيرة</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-info">
+        <span><i class="fa-solid fa-location-dot"></i> المقر الرئيسي: دمنهور - شارع عبد السلام الشاذلي</span>
+        <span><i class="fa-solid fa-phone"></i> 045-3357712</span>
+      </div>
+      <div class="top-links">
+        <a href="contact.html"><i class="fa-solid fa-headset"></i> فروع النقابة الـ 10</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo">
+          <img src="https://eea.org.eg/images/favicon.png" alt="Logo">
+          <div class="brand-text">
+            <h1>نقابة المهندسين بالبحيرة</h1>
+            <span>النقابة الفرعية بمحافظة البحيرة</span>
+          </div>
+        </a>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="قائمة التصفح">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="nav-menu" id="navMenu">
+          <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> الرئيسية</a>
+          <a href="committees.html" class="nav-link"><i class="fa-solid fa-users-gear"></i> اللجان النقابية (10)</a>
+          <a href="services.html" class="nav-link"><i class="fa-solid fa-briefcase"></i> الخدمات والرعاية الصحية</a>
+          <a href="training.html" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> مركز التدريب</a>
+          <a href="club.html" class="nav-link"><i class="fa-solid fa-umbrella-beach"></i> نادي المهندسين بدمنهور</a>
+          <a href="news.html" class="nav-link"><i class="fa-solid fa-newspaper"></i> الأخبار</a>
+          <a href="contact.html" class="nav-link active"><i class="fa-solid fa-envelope"></i> اتصل بنا</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Header -->
+  <section class="hero" style="padding: 50px 0 60px;">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <span class="badge-gold"><i class="fa-solid fa-map-location-dot"></i> التغطية الشاملة بالبحيرة</span>
+        <h1 class="hero-title" style="font-size: 2.4rem;">فروع النقابة الـ 10 <span>بمحافظة البحيرة</span></h1>
+        <p class="hero-desc">تقدم النقابة خدماتها عبر المقر الرئيسي بدمنهور بالإضافة إلى 9 فروع متوزعة بكافة مراكز ومدن المحافظة للتيسير على جميع المهندسين.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Regional Branches Directory -->
+  <section class="section section-bg-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="subtitle">دليل المقرات والفروع</span>
+        <h2 class="section-title">فروع نقابة المهندسين بمراكز البحيرة</h2>
+        <p class="section-desc">تعرف على مواقع وساعات العمل وأرقام الهواتف المباشرة لكل فرع.</p>
+      </div>
+
+      <div class="branches-grid" id="branchesGrid">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="section section-bg-dark">
+    <div class="container">
+      <div style="max-width: 700px; margin: 0 auto;" class="glass-card">
+        <h3 style="color: var(--gold-primary); font-size: 1.5rem; text-align: center; margin-bottom: 20px; font-weight: 800;">
+          <i class="fa-solid fa-paper-plane"></i> تقديم استفسار أو مقترح للمجلس
+        </h3>
+        <form onsubmit="alert('تم إرسال استفسارك بنجاح. سيتم التواصل معك من قِبل الفريق المختص بالنقابة.'); return false;">
+          <div class="form-group">
+            <label style="color: white;">الاسم بالكامل:</label>
+            <input type="text" class="form-control" required placeholder="أدخل اسمك الكريم">
+          </div>
+          <div class="form-group">
+            <label style="color: white;">رقم القيد النقابي / الرقم القومي:</label>
+            <input type="text" class="form-control" required placeholder="أدخل رقم القيد النقابي">
+          </div>
+          <div class="form-group">
+            <label style="color: white;">رقم الهاتف / الواتساب:</label>
+            <input type="tel" class="form-control" required placeholder="01xxxxxxxxx">
+          </div>
+          <div class="form-group">
+            <label style="color: white;">الرسالة / المقترح:</label>
+            <textarea class="form-control" rows="4" required placeholder="اكتب تفاصيل الرسالة هنا..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; height: 50px; font-size: 1.05rem;">
+            إرسال الرسالة الآن <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>جميع الحقوق محفوظة © 2026 لنقابة المهندسين بالبحيرة | تصميم وتطوير تقني متطور داخل مجلد test website</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

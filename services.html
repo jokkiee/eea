@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الخدمات الإلكترونية والرعاية الصحية | نقابة المهندسين بالبحيرة</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-info">
+        <span><i class="fa-solid fa-location-dot"></i> المقر الرئيسي: دمنهور - شارع عبد السلام الشاذلي</span>
+        <span><i class="fa-solid fa-phone"></i> 045-3357712</span>
+      </div>
+      <div class="top-links">
+        <a href="contact.html"><i class="fa-solid fa-headset"></i> فروع النقابة الـ 10</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo">
+          <img src="https://eea.org.eg/images/favicon.png" alt="Logo">
+          <div class="brand-text">
+            <h1>نقابة المهندسين بالبحيرة</h1>
+            <span>النقابة الفرعية بمحافظة البحيرة</span>
+          </div>
+        </a>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="قائمة التصفح">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="nav-menu" id="navMenu">
+          <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> الرئيسية</a>
+          <a href="committees.html" class="nav-link"><i class="fa-solid fa-users-gear"></i> اللجان النقابية (10)</a>
+          <a href="services.html" class="nav-link active"><i class="fa-solid fa-briefcase"></i> الخدمات والرعاية الصحية</a>
+          <a href="training.html" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> مركز التدريب</a>
+          <a href="club.html" class="nav-link"><i class="fa-solid fa-umbrella-beach"></i> نادي المهندسين بدمنهور</a>
+          <a href="news.html" class="nav-link"><i class="fa-solid fa-newspaper"></i> الأخبار</a>
+          <a href="contact.html" class="nav-link"><i class="fa-solid fa-envelope"></i> اتصل بنا</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Header -->
+  <section class="hero" style="padding: 50px 0 60px;">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <span class="badge-gold"><i class="fa-solid fa-notes-medical"></i> الخدمات الرقمية والتأمين</span>
+        <h1 class="hero-title" style="font-size: 2.4rem;">خدمات الرعاية الصحية <span>وحاسبة الاشتراكات</span></h1>
+        <p class="hero-desc">احسب رسوم الاشتراك السنوية التفاعلية، وابحث في دليل المستشفيات والمراكز الطبية المتعاقدة بمختلف مراكز محافظة البحيرة.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Calculator Section -->
+  <section class="section section-bg-light" id="calculator">
+    <div class="container">
+      <div class="section-header">
+        <span class="subtitle">حاسبة تفاعلية</span>
+        <h2 class="section-title">حاسبة رسوم الاشتراكات النقابية والرعاية الصحية</h2>
+        <p class="section-desc">حدد سنة التخرج وخيارات الرعاية الصحية لحساب إجمالي القيمة المستحقة تقديرياً لعام 2026.</p>
+      </div>
+
+      <div class="calc-wrapper">
+        <div class="calc-grid">
+          <div>
+            <div class="form-group">
+              <label for="gradYear"><i class="fa-solid fa-graduation-cap" style="color: var(--gold-primary);"></i> سنة التخرج:</label>
+              <input type="number" id="gradYear" class="form-control" value="2020" min="1960" max="2026">
+            </div>
+
+            <div class="form-group">
+              <label><i class="fa-solid fa-heart-pulse" style="color: var(--gold-primary);"></i> الاشتراك في مشروع الرعاية الصحية:</label>
+              <div class="checkbox-group">
+                <input type="checkbox" id="healthCheck" checked>
+                <label for="healthCheck">إضافة الاشتراك الطبي للعضو الأصلي</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="dependentsCount"><i class="fa-solid fa-users" style="color: var(--gold-primary);"></i> عدد الأسر والمستفيدين والوالدين المقيدين:</label>
+              <input type="number" id="dependentsCount" class="form-control" value="1" min="0" max="10">
+            </div>
+          </div>
+
+          <div class="calc-result-card">
+            <div class="result-header">
+              <h4>تقدير إجمالي الرسوم النقابية</h4>
+              <p style="font-size: 0.85rem; color: rgba(255,255,255,0.7);">تشمل اشتراك العضوية وتأمين الرعاية الصحية لعام 2026</p>
+            </div>
+
+            <div class="result-total" id="totalFeeDisplay">
+              900 <span>جنيه مصري</span>
+            </div>
+
+            <div class="result-breakdown">
+              <div class="breakdown-row"><span>اشتراك العضوية الأساسي:</span> <span>حسب أقدمية التخرج</span></div>
+              <div class="breakdown-row"><span>بطاقة الرعاية الصحية للعضو:</span> <span>400 ج.م</span></div>
+              <div class="breakdown-row"><span>رعاية التابعين والوالدين:</span> <span>250 ج.م / للفرد</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Healthcare Network Directory -->
+  <section class="section section-bg-dark" id="healthcare">
+    <div class="container">
+      <div class="section-header">
+        <span class="subtitle">دليل الشركاء الطبية</span>
+        <h2 class="section-title">دليل المستشفيات والمراكز الطبية بالبحيرة</h2>
+        <p class="section-desc">ابحث بتصفية فورية عن المستشفيات ومراكز الأشعة والتحاليل المتعاقدة بدمنهور، كفر الدوار، والنوبارية.</p>
+      </div>
+
+      <div class="search-filter-bar">
+        <div class="filter-grid">
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="healthSearchInput" style="color: var(--primary-dark);">اسم المستشفى أو المركز:</label>
+            <input type="text" id="healthSearchInput" class="form-control" placeholder="ابحث باسم المركز أو الخدمة...">
+          </div>
+
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="healthCitySelect" style="color: var(--primary-dark);">المركز/المدينة:</label>
+            <select id="healthCitySelect" class="form-control">
+              <option value="all">جميع المراكز والمدن</option>
+              <option value="دمنهور">دمنهور</option>
+              <option value="كفر الدوار">كفر الدوار</option>
+              <option value="إيتاي البارود">إيتاي البارود</option>
+              <option value="النوبارية">النوبارية</option>
+            </select>
+          </div>
+
+          <button class="btn-primary" style="height: 48px; justify-content: center;"><i class="fa-solid fa-search"></i> بحث</button>
+        </div>
+      </div>
+
+      <div class="services-grid" id="healthcareGrid">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>جميع الحقوق محفوظة © 2026 لنقابة المهندسين بالبحيرة | تصميم وتطوير تقني متطور داخل مجلد test website</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
